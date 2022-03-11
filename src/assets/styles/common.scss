@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './global/container';
+@import './global/page';
+
+$--color-primary: $turquoise !default;
+
+.g-wrapper {
+  background: linear-gradient(180deg,hsla(0,0%,100%,.2),rgba($turquoise, 0.2)),#f0f5f7;
+}
+
+.tox-tinymce {
+  border-radius: 4px !important;
+  border-color: $gray-3 !important;
+}

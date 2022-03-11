@@ -1,0 +1,165 @@
+.g-sidebar {
+  max-width: 280px;
+  min-width: 280px;
+  height: 100vh;
+  filter: drop-shadow(0 0 24px rgba(0, 111, 128, 0.12));
+  border-radius: 0 40px 0 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+
+  &__logo {
+    width: 100%;
+    padding: 40px 20px;
+    display: block;
+
+    &-icon {
+      width: 90%;
+      height: auto;
+      margin: 0 auto;
+
+      &--mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__nav {
+    @include scrollbar;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px 20px;
+    display: flex;
+    min-height: 0;
+
+    &-list {
+      width: 100%;
+
+      &-item {
+        &-link {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          padding: 20px;
+          font-size: 16px;
+          line-height: 120%;
+          font-weight: 700;
+          color: $gray-1;
+          transition: background .3s ease, color .3s ease;
+          border-radius: 16px;
+          margin-bottom: 5px;
+
+          svg {
+            width: 20px !important;
+            height: auto;
+            margin-right: 10px;
+
+            * {
+              fill: $gray-1;
+              transition: fill .3s ease;
+            }
+          }
+
+          @mixin activeSidebarLink {
+            color: $cyan;
+            background: $turquoise;
+
+            svg {
+              * {
+                fill: $cyan;
+              }
+            }
+          }
+
+          @media (hover: hover) {
+            &:hover {
+              @include activeSidebarLink;
+            }
+          }
+
+          &.router-link-exact-active {
+            @include activeSidebarLink;
+          }
+        }
+      }
+    }
+  }
+
+  &__collapse-toggle {
+    margin: auto 10px 30px auto;
+    width: 40px;
+    height: 40px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      transform: rotate(180deg);
+      transition: transform .3s ease;
+    }
+  }
+
+  &--collapsed {
+    min-width: 60px;
+    max-width: 60px;
+
+    .g-sidebar {
+      &__logo {
+        padding: 25px 10px 10px;
+        margin-bottom: 20px;
+
+        &-icon {
+          &--desktop {
+            display: none;
+          }
+
+          &--mobile {
+            display: block;
+          }
+        }
+      }
+
+      &__collapse-toggle {
+        svg {
+          transform: rotate(0deg);
+        }
+      }
+
+      &__nav {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        &-list {
+          &-item {
+            &-link {
+              padding: 10px;
+
+              svg {
+                margin-right: 0;
+                max-height: 20px;
+              }
+
+              span {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .g-sidebar {
+    &__collapse-toggle {
+      display: flex;
+    }
+  }
+}

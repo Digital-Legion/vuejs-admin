@@ -1,0 +1,55 @@
+.page-container {
+  padding-left: 330px;
+  padding-right: 50px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.g-page {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  width: 100%;
+}
+
+.g-title {
+  font-style: normal;
+  font-size: 28px;
+  line-height: 120%;
+  font-weight: 700;
+  color: $dark;
+  margin: 0 0 30px 0;
+
+  .small {
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 400;
+    color: $dark;
+  }
+}
+
+.g-subtitle {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  color: $dark;
+  margin: 0 0 20px 0;
+}
+
+@media (max-width: 1100px) {
+  .page-container {
+    padding-left: 110px;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-container {
+    padding-left: 80px;
+    padding-right: 20px;
+  }
+
+  .g-page {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}

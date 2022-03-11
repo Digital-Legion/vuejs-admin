@@ -1,0 +1,36 @@
+.g-table {
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+
+  &__content {
+    position: relative;
+  }
+
+  .el-table {
+    width: 100%;
+
+    &__header, &__body {
+      width: 100% !important;
+    }
+
+    .cell {
+      word-break: break-word !important;
+    }
+  }
+
+  .g-button {
+    padding: 10px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

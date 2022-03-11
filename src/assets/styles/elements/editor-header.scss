@@ -1,0 +1,14 @@
+.g-editor-header {
+  &__buttons {
+    display: flex;
+
+    .g-button {
+      margin-right: 10px;
+      white-space: nowrap;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

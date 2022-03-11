@@ -1,0 +1,39 @@
+.page-header {
+  margin-bottom: 50px;
+  width: 100%;
+
+  &--double {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > *:last-child:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 120%;
+    color: $gray-2;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-header {
+    margin-bottom: 30px;
+
+    &--double {
+      display: block;
+
+      > *:last-child:not(:first-child) {
+        margin-top: 20px;
+        margin-left: 0;
+      }
+    }
+  }
+}

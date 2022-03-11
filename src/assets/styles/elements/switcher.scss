@@ -1,0 +1,45 @@
+.g-switcher {
+  height: 10px;
+  font-size: 16px;
+  line-height: 100%;
+  padding: 0 10px;
+  border: none;
+  border-radius: 700px;
+  background: $gray-3;
+  position: relative;
+  width: 30px;
+  cursor: pointer;
+  outline: none;
+  transition: background .2s ease;
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -6px;
+    width: 16px;
+    height: 16px;
+    background: $gray-2;
+    border-radius: 50%;
+    transition: transform .2s ease, background .2s ease;
+  }
+
+  &--active {
+    background: $turquoise;
+
+    &:after {
+      transform: translateX(26px);
+      background: $turquoise-dark;
+    }
+  }
+
+  &__label.g-label {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+}

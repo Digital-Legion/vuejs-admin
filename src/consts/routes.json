@@ -1,0 +1,88 @@
+[
+  {
+    "path": "/auth",
+    "name": "auth",
+    "componentPath": "@/pages/auth.vue",
+    "layout": "no-auth-layout"
+  },
+
+  {
+    "path": "/",
+    "redirect": "/users"
+  },
+  {
+    "path": "/users",
+    "name": "users",
+    "label": "Users",
+    "icon": "users",
+    "sidebarable": true,
+    "componentPath": "@/pages/user/table",
+    "layout": "auth-layout"
+  },
+  {
+    "path": "/users/create",
+    "name": "users-create",
+    "componentPath": "@/pages/user/editor",
+    "layout": "auth-layout"
+  },
+  {
+    "path": "/users/edit/:id",
+    "name": "users-edit",
+    "componentPath": "@/pages/user/editor",
+    "layout": "auth-layout"
+  },
+  {
+    "path": "/works",
+    "name": "works",
+    "label": "Works",
+    "icon": "briefcase",
+    "sidebarable": true,
+    "componentPath": "@/pages/work/table",
+    "layout": "auth-layout"
+  },
+  {
+    "path": "/works/create",
+    "name": "works-create",
+    "componentPath": "@/pages/work/editor",
+    "layout": "auth-layout"
+  },
+  {
+    "path": "/works/edit/:id",
+    "name": "works-edit",
+    "componentPath": "@/pages/work/editor",
+    "layout": "auth-layout"
+  },
+  {
+    "path": "*",
+    "redirect": "/"
+  },
+  {
+    "path": "/",
+    "redirect": "/posts"
+  },
+  {
+    "path": "/posts",
+    "name": "posts",
+    "label": "Posts",
+    "icon": "clipboard",
+    "sidebarable": true,
+    "componentPath": "@/pages/post/table",
+    "layout": "auth-layout"
+  },
+  {
+    "path": "/posts/create",
+    "name": "posts-create",
+    "componentPath": "@/pages/post/editor",
+    "layout": "auth-layout"
+  },
+  {
+    "path": "/posts/edit/:id",
+    "name": "posts-edit",
+    "componentPath": "@/pages/post/editor",
+    "layout": "auth-layout"
+  },
+  {
+    "path": "*",
+    "redirect": "/"
+  }
+]
